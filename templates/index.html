@@ -1,0 +1,28 @@
+<!doctype html>
+<head>
+  <title>JavaScript Exasadfsafsdfmasdple</title>
+  <link rel="icon" href="data:,">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href= "../static/styles.css">
+
+</head>
+
+<body>
+
+
+<div id="wrapper">
+  <canvas id="cantemp" width=700 height=500></canvas>
+  <canvas id="can" width=700 height=500></canvas>
+</div>
+<script type=text/javascript>
+  var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+</script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/scale.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/draw.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/dates.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/onLoad.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/scroll.js') }}"></script>
+<div style="display:block;">
+  {% include 'Dropdown.html' %}
+</div> 
+</body>
